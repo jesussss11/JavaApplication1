@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
 
 import com.mysql.jdbc.Connection;
@@ -23,13 +18,13 @@ public class Notas_libro extends database {
     String texto;
     String titulo;
     String tema;
- 
+    int id_notalibro;
     int ISBN_libro;
     
     
     
     public boolean añadir_nota( String titulo,String tema, String texto,int cod2){
-          String q="INSERT INTO notas_libros (ISBN_libro,titulo,tema,texto) VALUES ('"+cod2+"','"+titulo+"','"+tema+"','"+texto+"')";
+          String q="INSERT INTO notas_libros (ISBN_libro,titulo,tema,texto,id_notalibro) VALUES ('"+cod2+"','"+titulo+"','"+tema+"','"+texto+"','"+id_notalibro+"')";
          try {
                 PreparedStatement pstm = this.getConexion().prepareStatement(q);
                 pstm.execute();
@@ -44,7 +39,7 @@ public class Notas_libro extends database {
               public DefaultTableModel getTablaNotasLibro() throws SQLException{
          DefaultTableModel  tablemodel = new DefaultTableModel();
          int registros = 0;
-         String [] columNames ={"ISBN" , "Titulo","Tema","Texto"};
+         String [] columNames ={"ID","ISBN" , "Titulo","Tema","Texto"};
               try{
          PreparedStatement pstm = this.getConexion().prepareStatement( "SELECT count(*) as total FROM notas_libros");
          ResultSet res = pstm.executeQuery();
@@ -54,7 +49,7 @@ public class Notas_libro extends database {
       }catch(SQLException e){
          System.err.println( e.getMessage() );
       }
-               Object[][] data = new String[registros][4];
+               Object[][] data = new String[registros][5];
                 
                  try{
           //realizamos la consulta sql y llenamos los datos en la matriz "Object[][] data"
@@ -62,10 +57,11 @@ public class Notas_libro extends database {
          ResultSet res = pstm.executeQuery();
          int i=0;
          while(res.next()){
-                data[i][0] = res.getString( "ISBN_libro" );
-                data[i][1] = res.getString( "titulo" );
-                data[i][2] = res.getString( "tema" );
-                data[i][3] = res.getString( "texto" );
+                data[i][0] = res.getString( "id_notalibro" );
+                data[i][1] = res.getString( "ISBN_libro" );
+                data[i][2] = res.getString( "titulo" );
+                data[i][3] = res.getString( "tema" );
+                data[i][4] = res.getString( "texto" );
            
                  
             i++;
@@ -86,20 +82,20 @@ public class Notas_libro extends database {
           
           public void Buscar(String valor, String filtro, JTable tablanotaslibro){
 
-    String [] columnas={"ISBN","Titulo","Tema","Texto"};
-    String [] registro=new String[4];
+    String [] columnas={"ID","ISBN","Titulo","Tema","Texto"};
+    String [] registro=new String[5];
     ModeloTabla =new DefaultTableModel(null,columnas);
     String SSQL = null;
     Connection conn = null;
 
     if(filtro.equals("titulo")){
 
-        SSQL= "SELECT ISBN_libro,titulo,tema,texto "
+        SSQL= "SELECT id_notalibro,ISBN_libro,titulo,tema,texto "
                  + "FROM notas_libros WHERE titulo LIKE '%"+valor+"%'";
 
     }else if(filtro.equals("tema")){
 
-        SSQL= "SELECT ISBN_libro,titulo,tema,texto "
+        SSQL= "SELECT id_notalibro,ISBN_libro,titulo,tema,texto "
                  + "FROM notas_libros WHERE tema LIKE '%"+valor+"%'";
 
     }
@@ -112,11 +108,12 @@ public class Notas_libro extends database {
         ResultSet rs = st.executeQuery();
 
         while (rs.next()){
-
-            registro[0]=rs.getString("ISBN_libro");
-            registro[1]=rs.getString("titulo");
-            registro[2]=rs.getString("tema");
-            registro[3]=rs.getString("texto");
+            
+            registro[0]=rs.getString("id_notalibro");
+            registro[1]=rs.getString("ISBN_libro");
+            registro[2]=rs.getString("titulo");
+            registro[3]=rs.getString("tema");
+             registro[4]=rs.getString("texto");
 
 
             ModeloTabla.addRow(registro);
@@ -154,7 +151,7 @@ public class Notas_libro extends database {
         
            public boolean modificarnota_libro  ( String titulo, String tema,String texto, int cod5) throws SQLException{
         
-            String q = "UPDATE notas_libros SET  titulo='"+titulo+"',tema='"+tema+"',texto='"+texto+"' where ISBN_libro ='"+cod5+"'";
+            String q = "UPDATE notas_libros SET  titulo='"+titulo+"',tema='"+tema+"',texto='"+texto+"' where id_notalibro ='"+cod5+"'";
             
              try {
                 PreparedStatement pstm = this.getConexion().prepareStatement(q);
@@ -167,6 +164,14 @@ public class Notas_libro extends database {
        
             
         }
+
+    public int getId_notalibro() {
+        return id_notalibro;
+    }
+
+    public void setId_notalibro(int id_notalibro) {
+        this.id_notalibro = id_notalibro;
+    }
         
 
     public String getTexto() {

@@ -45,6 +45,8 @@ public class interfaz extends javax.swing.JFrame {
         btnañadirlibro = new javax.swing.JButton();
         txtañadlibroaño = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        txtañadlibroisbn = new javax.swing.JTextField();
         añadir_articulo = new javax.swing.JDialog();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -62,6 +64,8 @@ public class interfaz extends javax.swing.JFrame {
         txtañadartpagfin = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         btnañadirarticulo = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        txtañadartissn = new javax.swing.JTextField();
         modificar_libro = new javax.swing.JDialog();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -75,6 +79,8 @@ public class interfaz extends javax.swing.JFrame {
         btnmodiflibro = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         txtmodiflibroaño = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        txtmodiflibroisbn = new javax.swing.JTextField();
         modificar_articulo = new javax.swing.JDialog();
         txtmodifartpaginic = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
@@ -92,6 +98,8 @@ public class interfaz extends javax.swing.JFrame {
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         btnmodifarticulo = new javax.swing.JButton();
+        jLabel51 = new javax.swing.JLabel();
+        txtmodifartissn = new javax.swing.JTextField();
         añadirnotalibro = new javax.swing.JDialog();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
@@ -196,6 +204,8 @@ public class interfaz extends javax.swing.JFrame {
 
         jLabel4.setText("Año");
 
+        jLabel19.setText("ISBN:");
+
         javax.swing.GroupLayout añadir_libroLayout = new javax.swing.GroupLayout(añadir_libro.getContentPane());
         añadir_libro.getContentPane().setLayout(añadir_libroLayout);
         añadir_libroLayout.setHorizontalGroup(
@@ -215,15 +225,18 @@ public class interfaz extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel4))
-                        .addGap(1, 1, 1)))
+                        .addGap(1, 1, 1))
+                    .addComponent(jLabel19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtañadlibrotitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
-                        .addComponent(txtaañadlibroautor)
-                        .addComponent(txtañadlibronpag)
-                        .addComponent(txtañadlibroedit))
-                    .addComponent(txtañadlibroaño, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtañadlibrotitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                            .addComponent(txtaañadlibroautor)
+                            .addComponent(txtañadlibronpag)
+                            .addComponent(txtañadlibroedit))
+                        .addComponent(txtañadlibroaño, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtañadlibroisbn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(btnañadirlibro)
                 .addGap(22, 22, 22))
@@ -233,7 +246,11 @@ public class interfaz extends javax.swing.JFrame {
             .addGroup(añadir_libroLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel9)
-                .addGap(43, 43, 43)
+                .addGap(9, 9, 9)
+                .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(txtañadlibroisbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
                 .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtañadlibrotitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
@@ -249,7 +266,7 @@ public class interfaz extends javax.swing.JFrame {
                 .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtañadlibroedit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addGap(18, 22, Short.MAX_VALUE)
+                .addGap(18, 21, Short.MAX_VALUE)
                 .addGroup(añadir_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnañadirlibro)
                     .addComponent(txtañadlibroaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -294,6 +311,8 @@ public class interfaz extends javax.swing.JFrame {
 
         btnañadirarticulo.setText("Añadir");
 
+        jLabel29.setText("ISSN:");
+
         javax.swing.GroupLayout añadir_articuloLayout = new javax.swing.GroupLayout(añadir_articulo.getContentPane());
         añadir_articulo.getContentPane().setLayout(añadir_articuloLayout);
         añadir_articuloLayout.setHorizontalGroup(
@@ -312,16 +331,18 @@ public class interfaz extends javax.swing.JFrame {
                                     .addComponent(jLabel14)
                                     .addComponent(jLabel15)
                                     .addComponent(jLabel16)
-                                    .addComponent(jLabel17))
+                                    .addComponent(jLabel17)
+                                    .addComponent(jLabel29))
                                 .addGap(50, 50, 50)
                                 .addGroup(añadir_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtañadartautor, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtañadartautor, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
                                     .addComponent(txtañadarttitulo, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtañadartnomrevist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-                                    .addComponent(txtañadartaño, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-                                    .addComponent(txtañadartmes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+                                    .addComponent(txtañadartnomrevist, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtañadartaño, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtañadartmes, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txtañadartpaginic, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtañadartpagfin, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addComponent(txtañadartpagfin, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtañadartissn)))
                             .addGroup(añadir_articuloLayout.createSequentialGroup()
                                 .addGap(168, 168, 168)
                                 .addComponent(btnañadirarticulo))))
@@ -363,7 +384,11 @@ public class interfaz extends javax.swing.JFrame {
                 .addGroup(añadir_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtañadartpagfin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(añadir_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(txtañadartissn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(btnañadirarticulo)
                 .addContainerGap())
         );
@@ -394,6 +419,10 @@ public class interfaz extends javax.swing.JFrame {
 
         jLabel10.setText("Año:");
 
+        jLabel50.setText("ISBN:");
+
+        txtmodiflibroisbn.setEditable(false);
+
         javax.swing.GroupLayout modificar_libroLayout = new javax.swing.GroupLayout(modificar_libro.getContentPane());
         modificar_libro.getContentPane().setLayout(modificar_libroLayout);
         modificar_libroLayout.setHorizontalGroup(
@@ -410,18 +439,20 @@ public class interfaz extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_libroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(modificar_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel50)
                     .addComponent(jLabel10)
                     .addComponent(jLabel23)
                     .addComponent(jLabel22)
                     .addComponent(jLabel20)
                     .addComponent(jLabel21))
-                .addGap(91, 91, 91)
+                .addGap(90, 90, 90)
                 .addGroup(modificar_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtmodiflibroautor, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
                     .addComponent(txtmodiflibrotitulo, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtmodiflibroedit, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtmodiflibronpag)
-                    .addComponent(txtmodiflibroaño))
+                    .addComponent(txtmodiflibroaño)
+                    .addComponent(txtmodiflibroisbn))
                 .addGap(97, 97, 97))
         );
         modificar_libroLayout.setVerticalGroup(
@@ -429,11 +460,15 @@ public class interfaz extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_libroLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel24)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(modificar_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel50)
+                    .addComponent(txtmodiflibroisbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
                 .addGroup(modificar_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(txtmodiflibrotitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(modificar_libroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
                     .addComponent(txtmodiflibroautor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -491,56 +526,73 @@ public class interfaz extends javax.swing.JFrame {
 
         btnmodifarticulo.setText("Modificar");
 
+        jLabel51.setText("ISSN:");
+
+        txtmodifartissn.setEditable(false);
+
         javax.swing.GroupLayout modificar_articuloLayout = new javax.swing.GroupLayout(modificar_articulo.getContentPane());
         modificar_articulo.getContentPane().setLayout(modificar_articuloLayout);
         modificar_articuloLayout.setHorizontalGroup(
             modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modificar_articuloLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel27)
-                    .addComponent(jLabel32)
-                    .addComponent(jLabel30)
-                    .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(50, 50, 50)
                 .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(modificar_articuloLayout.createSequentialGroup()
-                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtmodifartnomrevist)
-                            .addComponent(txtmodifartaño, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtmodifartmes, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(modificar_articuloLayout.createSequentialGroup()
-                                .addComponent(txtmodifartpagfin, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txtmodifartautor)
-                            .addComponent(txtmodifarttitulo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                        .addComponent(btnmodifarticulo))
+                                .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel31)
+                                    .addComponent(jLabel28)
+                                    .addComponent(jLabel27)
+                                    .addComponent(jLabel32)
+                                    .addComponent(jLabel30)
+                                    .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(50, 50, 50)
+                                .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(modificar_articuloLayout.createSequentialGroup()
+                                        .addComponent(txtmodifartpaginic, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(modificar_articuloLayout.createSequentialGroup()
+                                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(txtmodifartissn, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtmodifartnomrevist, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtmodifartaño)
+                                            .addComponent(txtmodifartmes)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, modificar_articuloLayout.createSequentialGroup()
+                                                .addComponent(txtmodifartpagfin, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addComponent(txtmodifartautor, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtmodifarttitulo, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGap(45, 45, 45)
+                                        .addComponent(btnmodifarticulo))))
+                            .addGroup(modificar_articuloLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel33)
+                                .addGap(122, 122, 122)))
+                        .addGap(10, 10, 10))
                     .addGroup(modificar_articuloLayout.createSequentialGroup()
-                        .addComponent(txtmodifartpaginic, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_articuloLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel33)
-                .addGap(125, 125, 125))
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel51)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         modificar_articuloLayout.setVerticalGroup(
             modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(modificar_articuloLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, modificar_articuloLayout.createSequentialGroup()
-                        .addComponent(jLabel33)
-                        .addGap(25, 25, 25)
-                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel30)
-                            .addComponent(txtmodifartautor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel51)
+                            .addComponent(txtmodifartissn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtmodifartautor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(modificar_articuloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel31)
                             .addComponent(txtmodifarttitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1010,13 +1062,13 @@ public class interfaz extends javax.swing.JFrame {
 
         tablanotaslibro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "T.Referencia", "Tema", "Texto"
+                "ID", "ISBN", "T.Referencia", "Tema", "Texto"
             }
         ));
         scrollnotas.setViewportView(tablanotaslibro);
@@ -1053,13 +1105,13 @@ public class interfaz extends javax.swing.JFrame {
 
         tablanotasarticulo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "T.Referencia", "Tema", "Texto"
+                "ID", "ISSN", "T.Referencia", "Tema", "Texto"
             }
         ));
         scrollnotas1.setViewportView(tablanotasarticulo);
@@ -1323,6 +1375,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -1333,6 +1386,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
@@ -1356,6 +1410,8 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1384,6 +1440,7 @@ public class interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField txtaañadlibroautor;
     public javax.swing.JTextField txtañadartautor;
     public javax.swing.JTextField txtañadartaño;
+    public javax.swing.JTextField txtañadartissn;
     public javax.swing.JTextField txtañadartmes;
     public javax.swing.JTextField txtañadartnomrevist;
     public javax.swing.JTextField txtañadartpagfin;
@@ -1391,6 +1448,7 @@ public class interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField txtañadarttitulo;
     public javax.swing.JTextField txtañadlibroaño;
     public javax.swing.JTextField txtañadlibroedit;
+    public javax.swing.JTextField txtañadlibroisbn;
     public javax.swing.JTextField txtañadlibronpag;
     public javax.swing.JTextField txtañadlibrotitulo;
     public javax.swing.JTextField txtañadnotarttema;
@@ -1405,6 +1463,7 @@ public class interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField txtinvisibleelimlibro;
     public javax.swing.JTextField txtmodifartautor;
     public javax.swing.JTextField txtmodifartaño;
+    public javax.swing.JTextField txtmodifartissn;
     public javax.swing.JTextField txtmodifartmes;
     public javax.swing.JTextField txtmodifartnomrevist;
     public javax.swing.JTextField txtmodifartpagfin;
@@ -1413,6 +1472,7 @@ public class interfaz extends javax.swing.JFrame {
     public javax.swing.JTextField txtmodiflibroautor;
     public javax.swing.JTextField txtmodiflibroaño;
     public javax.swing.JTextField txtmodiflibroedit;
+    public javax.swing.JTextField txtmodiflibroisbn;
     public javax.swing.JTextField txtmodiflibronpag;
     public javax.swing.JTextField txtmodiflibrotitulo;
     public javax.swing.JTextField txtmodifnotarttema;

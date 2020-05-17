@@ -28,8 +28,11 @@ public class Articulos extends database{
     String pagfin;
     
     
-    public boolean Añadir_articulo( String autor, String titulo, String nombrerevist,String anio, String mes, String paginic, String pagfin) throws SQLException{
+    public boolean Añadir_articulo(  String ISSN ,String autor, String titulo, String nombrerevist,String anio, String mes, String paginic, String pagfin) throws SQLException{
         
+         if( valida_datos(   
+             autor, titulo, ISSN) )
+        {
          String q ="INSERT INTO Articulos(ISSN,autor,titulo,nombrerevist,anio,mes,paginic,pagfin) VALUES ('"+ISSN+"','"+autor+"','"+titulo+"','"+nombrerevist+"','"+anio+"','"+mes+"','"+paginic+"','"+pagfin+"')";
          try {
                 PreparedStatement pstm = this.getConexion().prepareStatement(q);
@@ -39,14 +42,14 @@ public class Articulos extends database{
             }catch(SQLException e){
                 System.err.println( e.getMessage() );
             }
-            return false;            
+            return false;  
+        }
+         return false;
     }
     public boolean Modificar_articulo( String autor, String titulo, String nombrerevist,String anio, String mes, String paginic, String pagfin, int cod) throws SQLException{
-        if( valida_datos(   
-             autor, titulo ) )
-        {
+       
         //se arma la consulta
-             String q=" UPDATE Articulos SET  autor='" +autor + "', titulo='" + titulo+"',nombrerevist='"+nombrerevist+"',anio='"+anio+"',mes='"+mes+"',paginic='"+paginic+"',pagfin='"+paginic+"',pagfin='"+pagfin+"' where ISSN='"+cod+"'";
+             String q=" UPDATE Articulos SET  autor='" +autor + "', titulo='" + titulo+"',nombrerevist='"+nombrerevist+"',anio='"+anio+"',mes='"+mes+"',paginic='"+paginic+"',pagfin='"+pagfin+"' where ISSN='"+cod+"'";
              //se ejecuta
         try {
                 PreparedStatement pstm = this.getConexion().prepareStatement(q);
@@ -57,8 +60,8 @@ public class Articulos extends database{
                 System.err.println( e.getMessage() );
             }
             return false;
-        }
-        return false;
+        
+       
         
         
         
@@ -232,9 +235,18 @@ public class Articulos extends database{
 
 }
      
-       private boolean valida_datos ( String autor, String titulo) {
+       private boolean valida_datos_modif( String autor, String titulo) {
              
          if(  autor.equals("") || titulo.equals("")){
+            return false;
+        }else return true;
+        
+        } 
+       
+           
+       private boolean valida_datos( String autor, String titulo, String ISSN) {
+             
+         if( autor.equals("") || titulo.equals("") || !ISSN.matches("^[0-9]{0,8}$")){
             return false;
         }else return true;
         

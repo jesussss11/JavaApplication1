@@ -325,7 +325,7 @@ public class Controlador implements ActionListener,MouseListener,ItemListener {
         {
             try{
                 if(this.l.añadir_libros(
-                      
+                      this.in.txtañadlibroisbn.getText(),
                         this.in.txtañadlibrotitulo.getText(),
                         this.in.txtaañadlibroautor.getText(),
                         this.in.txtañadlibronpag.getText(),
@@ -335,7 +335,7 @@ public class Controlador implements ActionListener,MouseListener,ItemListener {
                     
                     this.in.tablalibro.setModel(this.l.getTablaLibros());
                      JOptionPane.showMessageDialog(in,"Exito: Registro añadido.");
-                     
+                     this.in.txtañadlibroisbn.setText("");
                      this.in.txtañadlibrotitulo.setText("");
                      this.in.txtaañadlibroautor.setText("");
                      this.in.txtañadlibronpag.setText("");
@@ -361,7 +361,7 @@ public class Controlador implements ActionListener,MouseListener,ItemListener {
         {
             try{
                 if(this.a.Añadir_articulo(
-                
+                this.in.txtañadartissn.getText(),
                 this.in.txtañadartautor.getText(),
                 this.in.txtañadarttitulo.getText(),
                 this.in.txtañadartnomrevist.getText(),
@@ -373,6 +373,8 @@ public class Controlador implements ActionListener,MouseListener,ItemListener {
                
                  this.in.tablartic.setModel(this.a.getTablaArticulos());
                      JOptionPane.showMessageDialog(in,"Exito: Registro añadido.");
+                     
+                this.in.txtañadartissn.setText("");
                 this.in.txtañadartautor.setText("");
                 this.in.txtañadarttitulo.setText("");
                 this.in.txtañadartnomrevist.setText("");
@@ -646,7 +648,7 @@ break;
             
             cod2 = Integer.parseInt((String)this.in.tablalibro.getValueAt(fila, 0));
             
-           
+           in.txtmodiflibroisbn.setText(String.valueOf(this.in.tablalibro.getValueAt(fila,0)));
             in.txtmodiflibrotitulo.setText(String.valueOf(this.in.tablalibro.getValueAt(fila, 1)));
             in.txtmodiflibroautor.setText(String.valueOf(this.in.tablalibro.getValueAt(fila, 2)));
             in.txtmodiflibronpag.setText(String.valueOf(this.in.tablalibro.getValueAt(fila, 3)));
@@ -657,6 +659,7 @@ break;
          if(fila2>-1 && e.getSource().equals(in.tablartic)){
              
              cod=Integer.parseInt((String) this.in.tablartic.getValueAt(fila2, 0));
+             in.txtmodifartissn.setText(String.valueOf(this.in.tablalibro.getValueAt(fila2,0)));
              in.txtmodifartautor.setText(String.valueOf(this.in.tablartic.getValueAt(fila2, 1)));
              in.txtmodifarttitulo.setText(String.valueOf(this.in.tablartic.getValueAt(fila2, 2)));
              in.txtmodifartnomrevist.setText(String.valueOf(this.in.tablartic.getValueAt(fila2, 3)));
@@ -687,15 +690,15 @@ break;
          }
          if(fila7>-1 && e.getSource().equals(in.tablanotaslibro)){
              cod5= Integer.parseInt((String) this.in.tablanotaslibro.getValueAt(fila7, 0));
-             in.txtmodifnotlibtitulo.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 1)));
-             in.txtmodifnotlibtema.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 2)));
-             in.txtmodifnotlibtexto.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 3)));
+             in.txtmodifnotlibtitulo.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 2)));
+             in.txtmodifnotlibtema.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 3)));
+             in.txtmodifnotlibtexto.setText(String.valueOf(this.in.tablanotaslibro.getValueAt(fila7, 4)));
          }
          if(fila8>-1 && e.getSource().equals(in.tablanotasarticulo)){
              cod6= Integer.parseInt((String) this.in.tablanotasarticulo.getValueAt(fila8, 0));
-             in.txtmodifnotarttitulo.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 1)));
-             in.txtmodifnotarttema.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 2)));
-             in.txtmodifnotarttexto.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 3)));
+             in.txtmodifnotarttitulo.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 2)));
+             in.txtmodifnotarttema.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 3)));
+             in.txtmodifnotarttexto.setText(String.valueOf(this.in.tablanotasarticulo.getValueAt(fila8, 4)));
          }
          
          

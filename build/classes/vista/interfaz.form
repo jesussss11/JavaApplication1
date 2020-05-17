@@ -30,16 +30,20 @@
                           </Group>
                           <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="jLabel19" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="90" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtañadlibrotitulo" pref="60" max="32767" attributes="0"/>
-                          <Component id="txtaañadlibroautor" max="32767" attributes="0"/>
-                          <Component id="txtañadlibronpag" max="32767" attributes="0"/>
-                          <Component id="txtañadlibroedit" max="32767" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtañadlibrotitulo" pref="60" max="32767" attributes="0"/>
+                              <Component id="txtaañadlibroautor" max="32767" attributes="0"/>
+                              <Component id="txtañadlibronpag" max="32767" attributes="0"/>
+                              <Component id="txtañadlibroedit" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="txtañadlibroaño" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="txtañadlibroaño" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="txtañadlibroisbn" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="btnañadirlibro" min="-2" max="-2" attributes="0"/>
@@ -52,7 +56,12 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtañadlibroisbn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="txtañadlibrotitulo" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -72,7 +81,7 @@
                       <Component id="txtañadlibroedit" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" pref="22" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" pref="21" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnañadirlibro" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtañadlibroaño" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -156,6 +165,16 @@
             <Property name="text" type="java.lang.String" value="A&#xf1;o"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel19">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ISBN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txta&#xf1;adlibroisbn">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="a&#xf1;adir_articulo">
@@ -181,16 +200,18 @@
                                       <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel29" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtañadartautor" alignment="0" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <Component id="txtañadartautor" alignment="0" pref="59" max="32767" attributes="0"/>
                                       <Component id="txtañadarttitulo" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="txtañadartnomrevist" alignment="1" pref="61" max="32767" attributes="0"/>
-                                      <Component id="txtañadartaño" alignment="1" pref="61" max="32767" attributes="0"/>
-                                      <Component id="txtañadartmes" alignment="1" pref="61" max="32767" attributes="0"/>
+                                      <Component id="txtañadartnomrevist" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txtañadartaño" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txtañadartmes" alignment="1" max="32767" attributes="0"/>
                                       <Component id="txtañadartpaginic" alignment="1" max="32767" attributes="0"/>
                                       <Component id="txtañadartpagfin" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txtañadartissn" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -248,7 +269,12 @@
                       <Component id="txtañadartpagfin" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtañadartissn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
                   <Component id="btnañadirarticulo" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -351,6 +377,16 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel29">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ISSN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txta&#xf1;adartissn">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="modificar_libro">
@@ -377,19 +413,21 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel20" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel21" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txtmodiflibroautor" alignment="1" pref="60" max="32767" attributes="0"/>
                       <Component id="txtmodiflibrotitulo" alignment="1" max="32767" attributes="0"/>
                       <Component id="txtmodiflibroedit" alignment="1" max="32767" attributes="0"/>
                       <Component id="txtmodiflibronpag" max="32767" attributes="0"/>
                       <Component id="txtmodiflibroaño" max="32767" attributes="0"/>
+                      <Component id="txtmodiflibroisbn" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
               </Group>
@@ -400,12 +438,17 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtmodiflibroisbn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtmodiflibrotitulo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtmodiflibroautor" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -505,6 +548,19 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
+        <Component class="javax.swing.JLabel" name="jLabel50">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ISBN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtmodiflibroisbn">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="modificar_articulo">
@@ -517,61 +573,80 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel27" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel32" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel30" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel25" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jLabel26" alignment="1" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtmodifartnomrevist" max="32767" attributes="0"/>
-                              <Component id="txtmodifartaño" alignment="1" max="32767" attributes="0"/>
-                              <Component id="txtmodifartmes" alignment="1" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="txtmodifartpagfin" min="-2" pref="71" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel28" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel27" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel32" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel30" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jLabel25" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="jLabel26" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="txtmodifartpaginic" min="-2" pref="71" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="txtmodifartissn" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtmodifartnomrevist" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtmodifartaño" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="txtmodifartmes" alignment="1" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="txtmodifartpagfin" min="-2" pref="71" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="txtmodifartautor" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtmodifarttitulo" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                          <Component id="btnmodifarticulo" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <Component id="txtmodifartautor" max="32767" attributes="0"/>
-                              <Component id="txtmodifarttitulo" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="45" max="32767" attributes="0"/>
-                          <Component id="btnmodifarticulo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="txtmodifartpaginic" min="-2" pref="71" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtmodifartautor" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtmodifartissn" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtmodifartautor" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel30" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtmodifarttitulo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -703,6 +778,19 @@
         <Component class="javax.swing.JButton" name="btnmodifarticulo">
           <Properties>
             <Property name="text" type="java.lang.String" value="Modificar"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel51">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ISSN:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtmodifartissn">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1752,8 +1840,9 @@
                 <Component class="javax.swing.JTable" name="tablanotaslibro">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="4">
+                      <Table columnCount="5" rowCount="4">
                         <Column editable="true" title="ID" type="java.lang.Object"/>
+                        <Column editable="true" title="ISBN" type="java.lang.Object"/>
                         <Column editable="true" title="T.Referencia" type="java.lang.Object"/>
                         <Column editable="true" title="Tema" type="java.lang.Object"/>
                         <Column editable="true" title="Texto" type="java.lang.Object"/>
@@ -1761,6 +1850,11 @@
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
@@ -1845,8 +1939,9 @@
                 <Component class="javax.swing.JTable" name="tablanotasarticulo">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="4" rowCount="4">
+                      <Table columnCount="5" rowCount="4">
                         <Column editable="true" title="ID" type="java.lang.Object"/>
+                        <Column editable="true" title="ISSN" type="java.lang.Object"/>
                         <Column editable="true" title="T.Referencia" type="java.lang.Object"/>
                         <Column editable="true" title="Tema" type="java.lang.Object"/>
                         <Column editable="true" title="Texto" type="java.lang.Object"/>
@@ -1854,6 +1949,11 @@
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>

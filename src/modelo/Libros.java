@@ -44,12 +44,15 @@ public class Libros extends database{
     
     
     //cambiar a de añadir a mayuscula
-    public boolean añadir_libros( String titulo, String autor, String npagin, String editorial,String anio){
-      
+    public boolean añadir_libros( String ISBN,String titulo, String autor, String npagin, String editorial,String anio){
+       
+         if( valida_datos(   
+             autor, titulo, ISBN) )
+        {
        try {
         CallableStatement pstm;
         pstm = this.getConexion().prepareCall("{call Añadir_libro(?,?,?,?,?,?)}");
-        pstm.setString(1, "0");
+        pstm.setString(1, ISBN);
         pstm.setString(2, titulo);
         pstm.setString(3, autor);
         pstm.setString(4, npagin);
@@ -63,7 +66,9 @@ public class Libros extends database{
            System.err.println(e.getMessage());
        }
         return res;
-       }
+       }return false;
+    
+    }
              
    
          
@@ -266,6 +271,14 @@ public class Libros extends database{
     }
 
 }
+          
+          private boolean valida_datos( String autor, String titulo, String ISBN) {
+             
+         if( autor.equals("") || titulo.equals("") || !ISBN.matches("^[0-9]{0,12}$")){
+            return false;
+        }else return true;
+        
+        } 
 
     public String getAnio() {
         return anio;
